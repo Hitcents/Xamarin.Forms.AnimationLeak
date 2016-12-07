@@ -47,6 +47,7 @@
     <Compile Include="SpinningView.xaml.cs">
       <DependentUpon>SpinningView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AnimationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

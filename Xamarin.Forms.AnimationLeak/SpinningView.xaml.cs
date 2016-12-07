@@ -19,11 +19,11 @@ namespace Xamarin.Forms.AnimationLeak
 
             if (Parent != null)
             {
-                this.Animate(AnimationKey, v => _box.Rotation = v, 0d, 360d, repeat: () => true);
+                _box.AnimateSafely(AnimationKey, (b, v) => b.Rotation = v, 0d, 360d, repeat: _ => true);
             }
             else
             {
-                this.AbortAnimation(AnimationKey);
+                _box.AbortAnimation(AnimationKey);
             }
         }
     }
